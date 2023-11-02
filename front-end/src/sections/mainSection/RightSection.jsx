@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ContentContainer from "../../components/contentContainer/contentContainer";
 import { data as dataExp } from "../../constants/data/exp";
 import { data as dataAbout } from "../../constants/data/about";
+import {data as dataProject} from '../../constants/data/projects'
 import MainContent from "../../components/mainContent/MainContent";
 
 const RightSection = () => {
@@ -15,8 +16,12 @@ const RightSection = () => {
       title: "Experiences",
     },
     {
-      data: [],
-      title: "Certificate",
+      data: dataProject,
+      title: "Projects",
+    },
+    {
+      data: dataExp,
+      title: "Certificates",
     },
   ];
 

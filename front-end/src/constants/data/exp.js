@@ -4,6 +4,8 @@ import { faLink } from "@fortawesome/free-solid-svg-icons";
 import skincancer from '../../assets/images/skincancer.png'
 import calWater from '../../assets/images/calwater.png'
 import poke from '../../assets/images/poke.png'
+import ceasar from '../../assets/images/cesar.png'
+import viginere from '../../assets/images/vigenere.jpg'
 
 
 export const data = [
@@ -59,6 +61,7 @@ export const data = [
         ],
         picture: calWater,
     },
+
     {
         id: 'data3',
         date: "2023",
@@ -78,4 +81,39 @@ export const data = [
         ],
         picture: poke,
     },
+
+    {
+        id: 'data4',
+        date: "2023",
+        title: " Vigenere Algorithm  ",
+        link: [
+            {
+                type: faGithub,
+                link: 'https://github.com/cs-634234024/Vigenere_Algorithm',
+            },
+        ],
+        descriptions: ['Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecatifugiat commodi iure deserunt debitis itaque at soluta dolore error.Expedita distinctio magni doloribus'], 
+        skills:  [
+            ["Python"],
+        ],
+        picture: viginere,
+    },
+   
+    {
+        id: 'data5',
+        date: "2023",
+        title: "  Ceasar Algorithm  ",
+        link: [
+            {
+                type: faGithub,
+                link: 'https://github.com/cs-634234024/Ceasar_Algorithm',
+            },
+        ],
+        descriptions: ['Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecatifugiat commodi iure deserunt debitis itaque at soluta dolore error.Expedita distinctio magni doloribus'], 
+        skills:  [
+            ["Python"],
+        ],
+        picture: ceasar,
+    },
+   
 ];

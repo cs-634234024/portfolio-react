@@ -20,6 +20,7 @@ const LeftSection = () => {
               <Navbar
                 key={`${val.title}-${idx}`}
                 title={val.title}
+                id = {`maincontent-${idx+1}`}
                 isMouseHover={mouseEnter[val.id]}
               />
             </div>

@@ -16,13 +16,13 @@ const Header = () => {
           </h1>
           <div>
             <div className="text-primaryTitle inline-block cursor-pointer bg-primary py-2 px-3 rounded-md ">
-              <div className="flex flex-col">
+              <a href='www.google.com' target='_blank' className="flex flex-col">
                 <FontAwesomeIcon
                   className="animate-bounce text-xl"
                   icon={faArrowDown}
                 />
                 <h1 className="text-md font-semibold">View Resume</h1>
-              </div>
+              </a>
             </div>
           </div>
         </div>
