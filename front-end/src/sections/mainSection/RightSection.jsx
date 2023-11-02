@@ -3,7 +3,9 @@ import ContentContainer from "../../components/contentContainer/contentContainer
 import { data as dataExp } from "../../constants/data/exp";
 import { data as dataAbout } from "../../constants/data/about";
 import {data as dataProject} from '../../constants/data/projects'
+import {data as dataCertificate} from '../../constants/data/certifications'
 import MainContent from "../../components/mainContent/MainContent";
+import Footer from "../footer/Footer";
 
 const RightSection = () => {
   const data = [
@@ -13,14 +15,14 @@ const RightSection = () => {
     },
     {
       data: dataExp,
-      title: "Experiences",
-    },
-    {
-      data: dataProject,
       title: "Projects",
     },
     {
-      data: dataExp,
+      data: dataProject,
+      title: "Experiences",
+    },
+    {
+      data: dataCertificate,
       title: "Certificates",
     },
   ];
@@ -37,6 +39,7 @@ const RightSection = () => {
       {data.map((val, idx) => (
         <MainContent key={`maincontent-${idx}`} id={`maincontent-${idx+1}`} data={val.data} title={val.title} />
       ))}
+      <Footer/>
     </div>
   );
 };
