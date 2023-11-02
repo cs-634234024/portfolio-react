@@ -4,10 +4,18 @@ import React from "react";
 const IconLink = ({ data, isMouseHover }) => {
   return (
     <>
-
-    <a href={data.link} target="_blank"> <FontAwesomeIcon className={`text-xl ${isMouseHover ? 'text-primary ' : ''}`} icon={data.type}/> </a> 
+      {data.map((val, idx) => (
+        <div className="flex mr-5" key={idx}>
+          <a href={val.link} target="_blank">
+            {" "}
+            <FontAwesomeIcon
+              className={`text-xl ${isMouseHover ? "text-primary " : ""}`}
+              icon={val.type}
+            />{" "}
+          </a>
+        </div>
+      ))}
     </>
-
   );
 };
 

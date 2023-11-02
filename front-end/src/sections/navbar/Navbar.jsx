@@ -4,8 +4,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 export const Navbar = ({ title, isMouseHover }) => {
+  
+  const scrollToElement = () => {
+    if(scrollTo.current){
+      scrollTo.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+  
   return (
-    <div
+    <div onClick={scrollToElement}
       className={` cursor-pointer text-lg font-medium duration-1000 ${
         isMouseHover ? "text-primaryTitle" : ""
       }`}

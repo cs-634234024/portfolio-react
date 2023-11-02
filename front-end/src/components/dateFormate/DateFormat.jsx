@@ -2,7 +2,7 @@ import React from 'react'
 
 const DateFormat = ({children , isMouseHover}) => {
   return (
-    <div className={`${isMouseHover ? 'text-primaryTitle ':''}`}>
+    <div className={`${isMouseHover ? 'text-primaryTitle font-bold ':''}`}>
         {children}
     </div>
   )

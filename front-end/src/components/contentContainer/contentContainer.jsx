@@ -10,35 +10,34 @@ const ContentContainer = ({ data }) => {
   const [isMouseEnter, setIsMouseEnter] = useState({});
 
   return (
-    <div>
-      <div
-        onMouseEnter={() => setIsMouseEnter({ [data.id]: true })}
-        onMouseLeave={() => setIsMouseEnter({ [data.id]: false })}
-        className="grid grid-cols-[25%_75%] p-2 gap-5 py-5 hover:bg-primaryContent rounded-md "
-      >
-        <div className="flex flex-col">
-          <DateFormat isMouseHover={isMouseEnter[data.id]}>
-            {" "}
-            {data.date}{" "}
-          </DateFormat>
-          <img
-            className="mt-5 rounded-md"
-            src={data.picture}
-            alt=""
-          />
-        </div>
-        <div className="flex flex-col mr-10">
-          <Title isMouseHover={isMouseEnter[data.id]} title={data.title} />
-          <div className="flex mt-10">
-            <IconLink data={data.link} isMouseHover={isMouseEnter[data.id]} />
+    <div className="">
+      {data.map((val, idx) => (
+        <div
+          key={idx}
+          onMouseEnter={() => setIsMouseEnter({ [val.id]: true })}
+          onMouseLeave={() => setIsMouseEnter({ [val.id]: false })}
+          className="grid grid-cols-[25%_75%] p-2 gap-5 py-5 hover:bg-primaryContent rounded-md "
+        >
+          <div className="flex flex-col">
+            <DateFormat isMouseHover={isMouseEnter[val.id]}>
+              {" "}
+              {val.date}{" "}
+            </DateFormat>
+            <img className="mt-5 rounded-md" src={val.picture} alt="" />
           </div>
-          <Detail data={data.descriptions} />
+          <div className="flex flex-col mr-10">
+            <Title isMouseHover={isMouseEnter[val.id]} title={val.title} />
+            <div className="flex mt-10">
+              <IconLink data={val.link} isMouseHover={isMouseEnter[val.id]} />
+            </div>
+            <Detail data={val.descriptions} />
 
-          <div className=" flex mt-10 gap-5 ">
-            <Skill data={data.skills} isMouseHover={isMouseEnter[data.id]} />
+            <div className=" flex mt-10 gap-5 ">
+              <Skill data={val.skills} isMouseHover={isMouseEnter[val.id]} />
+            </div>
           </div>
         </div>
-      </div>
+      ))}
     </div>
   );
 };

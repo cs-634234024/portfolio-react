@@ -13,7 +13,7 @@ const LeftSection = () => {
         <Header />
         <div className="h-full p-5 flex flex-col  gap-5">
           {dataNav.map((val, idx) => (
-            <div
+            <div key={idx}
               onMouseEnter={() => setMouseEnter({ [val.id]: true })}
               onMouseLeave={() => setMouseEnter({ [val.id]: false })}
             >
@@ -28,7 +28,7 @@ const LeftSection = () => {
 
         <div className="h-full flex  items-end p-5 gap-5 text-2xl ">
           {dataLink.map((val, idx) => (
-            <div
+            <div key={idx}
               onMouseEnter={() => setMouseEnter({ [val.id]: true })}
               onMouseLeave={() => setMouseEnter({ [val.id]: false })}
             >
