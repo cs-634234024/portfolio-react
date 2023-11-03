@@ -16,7 +16,7 @@ const Header = () => {
           </h1>
           <div>
             <div className="text-primaryTitle inline-block cursor-pointer bg-primary py-2 px-3 rounded-md ">
-              <a href='www.google.com' target='_blank' className="flex flex-col">
+              <a href='https://drive.google.com/file/d/1ucAt1vFuKggc6XlzX9tVByUWVXQaiHtn/view?usp=sharing' target='_blank' className="flex flex-col">
                 <FontAwesomeIcon
                   className="animate-bounce text-xl"
                   icon={faArrowDown}

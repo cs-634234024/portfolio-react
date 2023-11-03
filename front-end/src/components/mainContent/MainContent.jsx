@@ -6,7 +6,7 @@ const MainContent = ({ title, data , id}) => {
 
   return (
     <div id={id}  >
-      <div className="text-xl font-bold  mb-16">{title}</div>
+      <div className="text-xl font-bold  mb-16 uppercase">{title}</div>
       <ContentContainer data={data} />
     </div>
   );
